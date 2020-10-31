@@ -75,7 +75,6 @@ while ($row = mysqli_fetch_assoc($result)) { //mientras haya datos...
 		//SI SE QUIERE BUSCAR MEDIANTE IMPORTE Y FECHA A LA VEZ
 		
 				if(!empty($importe1)&&(!empty($importe2))&&(!empty($fecha_fin))&&(!empty($fecha_inicio))){
-					echo "sasasa";
 				$con = mysqli_connect("localhost","root","","elefont") 
 				or die("No se ha podido conectar a la BD");
 				$sql = "select * from dietas where gastos between '$importe1' and '$importe2' AND fecha_inicio and fecha_fin between '$fecha_inicio' and '$fecha_fin' order by fecha_inicio desc";
