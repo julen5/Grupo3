@@ -7,7 +7,6 @@
         <?php
 		$fecha= date("Y-m-d H:i:s");
 ?>
-
 <p> Transporte: </p>
 		<select required="required" name="transporte">
 			<option selected="true" disabled="disabled" value="">- Elige un medio de transporte -</option>
