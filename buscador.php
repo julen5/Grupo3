@@ -84,7 +84,6 @@ while ($row = mysqli_fetch_assoc($result)) { //mientras haya datos...
 				echo "ERROR: $error";}
 
 
-   
     ?>
     <table border="1">
     <tr>
