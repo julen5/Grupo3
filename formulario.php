@@ -29,7 +29,7 @@ if (isset($_POST['enviar_coche'])) {
             $peaje=$_POST['peaje'];
             $parking=$_POST['parking'];
             $otros_conceptos=$_POST['otros_conceptos'];
-            $con=mysqli_connect("localhost","root","","elefont") or die("error");
+            $con=mysqli_connect("localhost","grupo3","grupo3","wordpress") or die("error");
             $sql="insert into dietas (fecha_inicio,medio_transporte,distancia,peaje,parking,otros_conceptos) values ('$fecha','$medio_transporte','$distancia','$peaje','$parking','$otros_conceptos')";
             $result1 = mysqli_query($con, $sql);
             if (!$result1) {
@@ -45,7 +45,7 @@ if (isset($_POST['enviar_coche'])) {
                     $ticket=$_POST['ticket'];
                     $dieta=$_POST['dieta'];
                     $otros_conceptos=$_POST['otros_conceptos'];
-                    $con=mysqli_connect("localhost","root","","elefont") or die("error");
+                    $con=mysqli_connect("localhost","grupo3","grupo3","wordpress") or die("error");
                     $sql="insert into dietas (fecha_inicio,medio_transporte,ticket,dieta, otros_conceptos) values ('$fecha','$medio_transporte','$ticket','$dieta','$otros_conceptos')";
                     if (!$result1) {
                         $error = mysqli_error($con);
@@ -60,7 +60,7 @@ if (isset($_POST['enviar_coche'])) {
                             $ticket=$_POST['ticket'];
                             $dieta=$_POST['dieta'];
                             $otros_conceptos=$_POST['otros_conceptos'];
-                            $con=mysqli_connect("localhost","root","","elefont") or die("error");
+                            $con=mysqli_connect("localhost","grupo3","grupo3","wordpress") or die("error");
                             $sql="insert into dietas (fecha_inicio,medio_transporte,ticket,dieta, otros_conceptos) values ('$fecha','$medio_transporte','$ticket','$dieta','$otros_conceptos')";
                             $result1 = mysqli_query($con, $sql);
                             if (!$result1) {
@@ -92,7 +92,7 @@ if (isset($_POST['enviar_coche'])) {
                                             $ticket=$_POST['ticket'];
                                             $dieta=$_POST['dieta'];
                                              $otros_conceptos=$_POST['otros_conceptos'];
-                                    $con=mysqli_connect("localhost","root","","elefont") or die("error");
+                                    $con=mysqli_connect("localhost","grupo3","grupo3","wordpress") or die("error");
                                     $sql="insert into dietas (fecha_inicio,medio_transporte,ticket,dieta, otros_conceptos) values ('$fecha','$medio_transporte','$ticket','$dieta','$otros_conceptos')";
                                     $result1 = mysqli_query($con, $sql);
                                     if (!$result1) {
