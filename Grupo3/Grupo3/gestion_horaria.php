@@ -60,12 +60,14 @@
 	<td> <input name="miercoles4" type="number" min="0" max="24" value="0"/> </td>
 	<td> <input name="jueves4" type="number" min="0" max="24" value="0"/> </td>
 	<td> <input name="viernes4" type="number" min="0" max="24" value="0"/> </td>
+	
 </tr>
 
 
 
 
 </table>
+	<input required="required" name="fecha1" type="date"/> 
 <input type="submit" value="Guardar" name="guardar" />
 </form>
 </body>
@@ -78,6 +80,7 @@ if(isset($_POST['guardar'])){
 	$miercoles1=$_POST['miercoles1'];
 	$jueves1=$_POST['jueves1'];
 	$viernes1=$_POST['viernes1'];
+	$fecha1=$_POST['fecha1'];
 	
 	$nombre2=$_POST['nombre2'];
 	$codigo2=$_POST['codigo2'];
@@ -103,14 +106,16 @@ if(isset($_POST['guardar'])){
 	$jueves4=$_POST['jueves4'];
 	$viernes4=$_POST['viernes4'];
 
+	
+
 	$suma1=$lunes1+$martes1+$miercoles1+$jueves1+$viernes1;
 	$suma2=$lunes2+$martes2+$miercoles2+$jueves2+$viernes2;
 	$suma3=$lunes3+$martes3+$miercoles3+$jueves3+$viernes3;
 	$suma4=$lunes4+$martes4+$miercoles4+$jueves4+$viernes4;
 	
 	if($suma1>0){
-		$con=mysqli_connect("localhost","root","","elefont")or die("no se ha conectado a la base de datos");
-		$sql="insert into gestion (horas, nombre_proyecto, codigo_proyecto) values ('$suma1', '$nombre1', '$codigo1') ";
+		$con=mysqli_connect("localhost","grupo3","grupo3","wordpress")or die("no se ha conectado a la base de datos");
+		$sql="insert into gestion (horas, nombre_proyecto, codigo_proyecto, fecha) values ('$suma1', '$nombre1', '$codigo1','$fecha1') ";
 		$result=mysqli_query($con,$sql);
 if(!$result){
 	$error=mysqli_error($con);
@@ -119,8 +124,8 @@ if(!$result){
 	}
 	
 	if($suma2>0){
-		$con=mysqli_connect("localhost","root","","elefont")or die("no se ha conectado a la base de datos");
-		$sql="insert into gestion (horas, nombre_proyecto, codigo_proyecto) values ('$suma2', '$nombre2', '$codigo2') ";
+		$con=mysqli_connect("localhost","grupo3","grupo3","wordpress")or die("no se ha conectado a la base de datos");
+		$sql="insert into gestion (horas, nombre_proyecto, codigo_proyecto, fecha) values ('$suma2', '$nombre2', '$codigo2','$fecha1') ";
 		$result=mysqli_query($con,$sql);
 if(!$result){
 	$error=mysqli_error($con);
@@ -129,8 +134,8 @@ if(!$result){
 	}
 	
 	if($suma3>0){
-		$con=mysqli_connect("localhost","root","","elefont")or die("no se ha conectado a la base de datos");
-		$sql="insert into gestion (horas, nombre_proyecto, codigo_proyecto) values ('$suma3', '$nombre2', '$codigo3') ";
+		$con=mysqli_connect("localhost","grupo3","grupo3","wordpress")or die("no se ha conectado a la base de datos");
+		$sql="insert into gestion (horas, nombre_proyecto, codigo_proyecto, fecha) values ('$suma3', '$nombre2', '$codigo3','$fecha1') ";
 		$result=mysqli_query($con,$sql);
 if(!$result){
 	$error=mysqli_error($con);
@@ -139,8 +144,8 @@ if(!$result){
 	}
 	
 	if($suma4>0){
-		$con=mysqli_connect("localhost","root","","elefont")or die("no se ha conectado a la base de datos");
-		$sql="insert into gestion (horas, nombre_proyecto, codigo_proyecto) values ('$suma4', '$nombre4', '$codigo4') ";
+		$con=mysqli_connect("localhost","grupo3","grupo3","wordpress")or die("no se ha conectado a la base de datos");
+		$sql="insert into gestion (horas, nombre_proyecto, codigo_proyecto, fecha) values ('$suma4', '$nombre4', '$codigo4','$fecha1') ";
 		$result=mysqli_query($con,$sql);
 if(!$result){
 	$error=mysqli_error($con);
