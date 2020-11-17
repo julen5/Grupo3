@@ -49,19 +49,14 @@ if(isset($_POST['cambiar'])) {
     if($current_card == 'INTERNATIONAL') {
 		$res = json_decode( file_get_contents('http://localhost:4000/enablecard/user1/EUROPE'), true );
 		header("Refresh:0");
-?>
+		}
 
-<?php
     }
     if(isset($_POST['cambiar'])) {    
     if($current_card == 'EUROPE') {
         $res = json_decode ( file_get_contents ('http://localhost:4000/enablecard/user1/INTERNATIONAL'), true);
 		header("Refresh:0");
+		}
+		}
 ?>
-
-<?php
-}
-    }
-}
-?>	
 </html>
