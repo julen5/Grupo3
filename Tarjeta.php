@@ -11,6 +11,7 @@ $card_europe = $res['card_europe'];
 $card_international = $res['card_international'];
 $current_card = $res['current_card'];
 ?>
+<!-- <h1><?php //echo isset($_POST['cambiar']);?></h1>-->
     <form method="post" name="tarjetas" action="<?php echo $_SERVER['PHP_SELF']; ?>">
     Cambiar tarjeta:<input type="submit" name="cambiar" value="Activar"/>
     </form>
@@ -46,9 +47,8 @@ $current_card = $res['current_card'];
 <?php
 if(isset($_POST['cambiar'])) {
     if($current_card == 'INTERNATIONAL') {
-    $res = json_decode( file_get_contents('http://localhost:4000/enablecard/user1/EUROPE'), true );
-    $res = json_decode( file_get_contents('http://localhost:4000/infocards/user1/'), true );
-	header("Refresh:0");
+		$res = json_decode( file_get_contents('http://localhost:4000/enablecard/user1/EUROPE'), true );
+		header("Refresh:0");
 ?>
 
 <?php
@@ -56,7 +56,6 @@ if(isset($_POST['cambiar'])) {
     if(isset($_POST['cambiar'])) {    
     if($current_card == 'EUROPE') {
         $res = json_decode ( file_get_contents ('http://localhost:4000/enablecard/user1/INTERNATIONAL'), true);
-        $res = json_decode( file_get_contents('http://localhost:4000/infocards/user1/'), true ); 
 		header("Refresh:0");
 ?>
 
