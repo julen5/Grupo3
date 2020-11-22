@@ -80,7 +80,7 @@ while ($row = mysqli_fetch_assoc($result)) { //mientras haya datos...
 		//SI SE QUIERE BUSCAR MEDIANTE IMPORTE Y FECHA A LA VEZ
 		
 				if(!empty($importe1)&&(!empty($importe2))&&(!empty($fecha_fin))&&(!empty($fecha_inicio))){
-				$con = mysqli_connect("localhost","root","","elefont") 
+				$con = mysqli_connect("localhost","grupo3","grupo3","wordpress") 
 				or die("No se ha podido conectar a la BD");
                                 if ($user_id  == 1) {
 			        $sql = "select * from dietas where gastos between '$importe1' and '$importe2' AND fecha_inicio and fecha_fin between '$fecha_inicio' and '$fecha_fin' order by fecha_inicio desc";
@@ -133,7 +133,7 @@ while ($row = mysqli_fetch_assoc($result1)) { //mientras haya datos...
 		//IMPORTE FORM
 		
 	}else if(!empty($importe1)&&(!empty($importe2))){
-				$con = mysqli_connect("localhost","root","","elefont") 
+				$con = mysqli_connect("localhost","grupo3","grupo3","wordpress") 
 				or die("No se ha podido conectar a la BD");
                                  if ($user_id  == 1) {
                                  $sql = "select * from dietas where gastos between '$importe1' and '$importe2' order by fecha_inicio desc";
@@ -188,7 +188,7 @@ while ($row = mysqli_fetch_assoc($result1)) { //mientras haya datos...
 // FECHA FORM
 
     }else if(!empty($fecha_inicio)&&(!empty($fecha_fin))){
-				$con = mysqli_connect("localhost","root","","elefont") 
+				$con = mysqli_connect("localhost","grupo3","grupo3","wordpress") 
 				or die("No se ha podido conectar a la BD");
                            if ($user_id  == 1) {
 $sql = "select * from dietas where fecha_inicio and fecha_fin between '$fecha_inicio' and '$fecha_fin' order by fecha_inicio desc ";
