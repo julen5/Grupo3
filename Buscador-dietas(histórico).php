@@ -96,34 +96,32 @@ while ($row = mysqli_fetch_assoc($result)) { //mientras haya datos...
     ?>
     <table border="1">
     <tr>
-    	<th>Pais</th>
-    	<th>Ciudad</th>
+    	  	<th>Ciudad</th>
     	<th>Fecha_inicio</th>
     	<th>Fecha_fin</th>
-        <th>Continente</th>
     	<th>Gastos</th>
     	<th>Medio de transporte</th>
     	<th>Peaje</th>
         <th>Parking</th>
     	<th>Ticket</th>
-    	<th>Otros conceptos</th>
+		<th>Depto.</th>
+		<th>Proyecto</th>
     </tr>
 <?php
 while ($row = mysqli_fetch_assoc($result1)) { //mientras haya datos...
     extract($row);
 ?>  
     <tr>
-    	<td><?php echo $pais; ?></td>
-    	<td><?php echo $ciudad; ?></td> 
+    	    	<td><?php echo $ciudad; ?></td> 
     	<td><?php echo $fecha_inicio; ?></td>
     	<td><?php echo $fecha_fin; ?></td>
-        <td><?php echo $continente; ?></td>
     	<td><?php echo $gastos; ?></td>
         <td><?php echo $medio_transporte; ?></td>
     	<td><?php echo $peaje; ?></td>
         <td><?php echo $parking; ?></td>
         <td><?php echo $ticket; ?></td>
-    	<td><?php echo $otros_conceptos; ?></td>
+		<td><?php echo $codigo_departamento; ?></td>
+		<td><?php echo $codigo_proyecto; ?></td>
     </tr>
 
 <?php 
@@ -150,34 +148,32 @@ while ($row = mysqli_fetch_assoc($result1)) { //mientras haya datos...
     ?>
     <table border="1">
     <tr>
-    	<th>Pais</th>
-    	<th>Ciudad</th>
+    	  	<th>Ciudad</th>
     	<th>Fecha_inicio</th>
     	<th>Fecha_fin</th>
-        <th>Continente</th>
     	<th>Gastos</th>
     	<th>Medio de transporte</th>
     	<th>Peaje</th>
         <th>Parking</th>
     	<th>Ticket</th>
-    	<th>Otros conceptos</th>
+		<th>Depto.</th>
+		<th>Proyecto</th>
     </tr>
 <?php
 while ($row = mysqli_fetch_assoc($result1)) { //mientras haya datos...
     extract($row);
 ?>  
     <tr>
-    	<td><?php echo $pais; ?></td>
-    	<td><?php echo $ciudad; ?></td> 
+    	    	<td><?php echo $ciudad; ?></td> 
     	<td><?php echo $fecha_inicio; ?></td>
     	<td><?php echo $fecha_fin; ?></td>
-        <td><?php echo $continente; ?></td>
     	<td><?php echo $gastos; ?></td>
         <td><?php echo $medio_transporte; ?></td>
     	<td><?php echo $peaje; ?></td>
         <td><?php echo $parking; ?></td>
         <td><?php echo $ticket; ?></td>
-    	<td><?php echo $otros_conceptos; ?></td>
+		<td><?php echo $codigo_departamento; ?></td>
+		<td><?php echo $codigo_proyecto; ?></td>
     </tr>
 
 <?php 
@@ -188,7 +184,7 @@ while ($row = mysqli_fetch_assoc($result1)) { //mientras haya datos...
 // FECHA FORM
 
     }else if(!empty($fecha_inicio)&&(!empty($fecha_fin))){
-				$con = mysqli_connect("localhost","grupo3","grupo3","wordpress") 
+				$con = mysqli_connect("localhost","root","","elefont") 
 				or die("No se ha podido conectar a la BD");
                            if ($user_id  == 1) {
 $sql = "select * from dietas where fecha_inicio and fecha_fin between '$fecha_inicio' and '$fecha_fin' order by fecha_inicio desc ";
@@ -205,34 +201,32 @@ $sql = "select * from dietas where fecha_inicio and fecha_fin between '$fecha_in
     ?>
     <table border="1">
     <tr>
-    	<th>Pais</th>
-    	<th>Ciudad</th>
+    	  	<th>Ciudad</th>
     	<th>Fecha_inicio</th>
     	<th>Fecha_fin</th>
-        <th>Continente</th>
     	<th>Gastos</th>
     	<th>Medio de transporte</th>
     	<th>Peaje</th>
         <th>Parking</th>
     	<th>Ticket</th>
-    	<th>Otros conceptos</th>
+		<th>Depto.</th>
+		<th>Proyecto</th>
     </tr>
 <?php
 while ($row = mysqli_fetch_assoc($result1)) { //mientras haya datos...
     extract($row);
 ?>  
     <tr>
-    	<td><?php echo $pais; ?></td>
-    	<td><?php echo $ciudad; ?></td> 
+    	    	<td><?php echo $ciudad; ?></td> 
     	<td><?php echo $fecha_inicio; ?></td>
     	<td><?php echo $fecha_fin; ?></td>
-        <td><?php echo $continente; ?></td>
     	<td><?php echo $gastos; ?></td>
         <td><?php echo $medio_transporte; ?></td>
     	<td><?php echo $peaje; ?></td>
         <td><?php echo $parking; ?></td>
         <td><?php echo $ticket; ?></td>
-    	<td><?php echo $otros_conceptos; ?></td>
+		<td><?php echo $codigo_departamento; ?></td>
+		<td><?php echo $codigo_proyecto; ?></td>
     </tr>
 
 <?php 
