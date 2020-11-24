@@ -77,7 +77,7 @@ if(!$result){
     $error=mysqli_error($con);
     echo "$error";
 } else{
-    echo "se han introducido correctamente los datos";
+    echo "Datos introducidos correctamente";
 }
 
 }
