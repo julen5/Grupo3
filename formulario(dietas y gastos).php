@@ -32,7 +32,7 @@ if (isset($_POST['enviar_coche'])) {
 			$codigo_departamento=$_POST['codigo_departamento'];
 			$codigo_proyecto=$_POST['codigo_proyecto'];
             $otros_conceptos=$_POST['otros_conceptos'];
-            $km= ($distancia * 3);
+            $km= ($distancia * 0.3);
             $suma = $km+$peaje+$parking;
             $con=mysqli_connect("localhost","grupo3","grupo3","wordpress") or die("error");
             $result = mysqli_query($con, "insert into dietas (ID,gastos,fecha_inicio,medio_transporte,distancia,peaje,parking,otros_conceptos, codigo_departamento, codigo_proyecto) values ('$user_id', '$suma', '$fecha', '$medio_transporte', '$distancia', '$peaje', '$parking', '$otros_conceptos', '$codigo_departamento', '$codigo_proyecto')");
@@ -50,8 +50,9 @@ if (isset($_POST['enviar_coche'])) {
 			$codigo_departamento=$_POST['codigo_departamento'];
 			$codigo_proyecto=$_POST['codigo_proyecto'];
                     $otros_conceptos=$_POST['otros_conceptos'];
+					$suma = $ticket;
                     $con=mysqli_connect("localhost","grupo3","grupo3","wordpress") or die("error");
-                    $result = mysqli_query($con, "insert into dietas (ID,fecha_inicio,medio_transporte,ticket, otros_conceptos, codigo_departamento,codigo_proyecto) values ('$user_id','$fecha','$medio_transporte','$ticket','$otros_conceptos','$codigo_departamento','$codigo_proyecto')");
+                    $result = mysqli_query($con, "insert into dietas (ID,fecha_inicio,medio_transporte,ticket, otros_conceptos, codigo_departamento,codigo_proyecto,gastos) values ('$user_id','$fecha','$medio_transporte','$ticket','$otros_conceptos','$codigo_departamento','$codigo_proyecto','$suma')");
                     if (!$result) {
                         $error = mysqli_error($con);
                         echo "ERROR: $error"; 
@@ -66,8 +67,9 @@ if (isset($_POST['enviar_coche'])) {
 							$codigo_departamento=$_POST['codigo_departamento'];
 							$codigo_proyecto=$_POST['codigo_proyecto'];
                             $otros_conceptos=$_POST['otros_conceptos'];
+							$suma = $ticket;
                             $con=mysqli_connect("localhost","grupo3","grupo3","wordpress") or die("error");
-                            $result = mysqli_query($con, "insert into dietas (ID,fecha_inicio,medio_transporte,ticket, otros_conceptos, codigo_departamento,codigo_proyecto) values ('$user_id','$fecha','$medio_transporte','$ticket','$otros_conceptos','$codigo_departamento','$codigo_proyecto')");
+                            $result = mysqli_query($con, "insert into dietas (ID,fecha_inicio,medio_transporte,ticket, otros_conceptos, codigo_departamento,codigo_proyecto,gastos) values ('$user_id','$fecha','$medio_transporte','$ticket','$otros_conceptos','$codigo_departamento','$codigo_proyecto','$suma')");
                             if (!$result) {
                                 $error = mysqli_error($con);
                                 echo "ERROR: $error"; 
@@ -82,8 +84,9 @@ if (isset($_POST['enviar_coche'])) {
 									$codigo_departamento=$_POST['codigo_departamento'];
 									$codigo_proyecto=$_POST['codigo_proyecto'];
                                     $otros_conceptos=$_POST['otros_conceptos'];
-                                    $con=mysqli_connect("localhost","root","","elefont") or die("error");
-                                    $result = mysqli_query($con, "insert into dietas (ID, fecha_inicio,medio_transporte,ticket, otros_conceptos, codigo_departamento,codigo_proyecto) values ('$user_id','$fecha','$medio_transporte','$ticket','$otros_conceptos','$codigo_departamento','$codigo_proyecto')");
+									$suma = $ticket;
+                                    $con=mysqli_connect("localhost","grupo3","grupo3","wordpress") or die("error");
+                                    $result = mysqli_query($con, "insert into dietas (ID, fecha_inicio,medio_transporte,ticket, otros_conceptos, codigo_departamento,codigo_proyecto,gastos) values ('$user_id','$fecha','$medio_transporte','$ticket','$otros_conceptos','$codigo_departamento','$codigo_proyecto','$suma')");
                                     if (!$result) {
                                         $error = mysqli_error($con);
                                         echo "ERROR: $error"; 
@@ -98,8 +101,9 @@ if (isset($_POST['enviar_coche'])) {
 											$codigo_departamento=$_POST['codigo_departamento'];
 											$codigo_proyecto=$_POST['codigo_proyecto'];
                                              $otros_conceptos=$_POST['otros_conceptos'];
+											 $suma = $ticket;
                                     $con=mysqli_connect("localhost","grupo3","grupo3","wordpress") or die("error");  
-                                    $result1 = mysqli_query($con, "insert into dietas (ID,fecha_inicio,medio_transporte,ticket, otros_conceptos, codigo_departamento,codigo_proyecto) values ('$user_id','$fecha','$medio_transporte','$ticket','$otros_conceptos','$codigo_departamento','$codigo_proyecto')");
+                                    $result1 = mysqli_query($con, "insert into dietas (ID,fecha_inicio,medio_transporte,ticket, otros_conceptos, codigo_departamento,codigo_proyecto,gastos) values ('$user_id','$fecha','$medio_transporte','$ticket','$otros_conceptos','$codigo_departamento','$codigo_proyecto','$suma')");
                                     if (!$result1) {
                                         $error = mysqli_error($con);
                                         echo "ERROR: $error"; 
